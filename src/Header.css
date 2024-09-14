@@ -1,0 +1,140 @@
+/* General styles for the header */
+.header {
+    background-color: rgb(237, 183, 255);
+    display: flex;
+    justify-content: space-evenly;
+    /* Center the logo horizontally */
+    align-items: center;
+    /* Center the logo vertically */
+    height: 90px;
+    /* Adjust height as needed */
+    box-shadow: 0 10px 4px rgba(236, 27, 255, 0.1);
+    /* Optional shadow for better visibility */
+    border-bottom: 1px solid #8a8a8a;
+    /* Optional border for separation */
+    padding: 0 20px;
+}
+
+/* Style for the logo image */
+.logo {
+    max-height: 70px;
+    /* Adjust height as needed */
+    max-width: 100%;
+    /* Ensure logo fits within the header */
+}
+
+.phone-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Icon color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+/* Style for the phone icon SVG */
+.icon {
+    width: 45px;
+    /* Adjust icon size as needed */
+    height: 45px;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 600px) and (min-width: 200px) {
+    .header {
+        height: 80px;
+        /* Adjust height for smaller screens */
+    }
+
+    .logo {
+        max-height: 70px;
+        margin: 5px;
+        /* Adjust logo size for smaller screens */
+    }
+
+        .icon {
+            width: 30px;
+            /* Adjust icon size for smaller screens */
+            height: 40px;
+        }
+}
+
+.whatsapp{
+    text-wrap: nowrap;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.typing-text {
+    font-size: 3rem;
+    /* Responsive font size */
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #fff;
+    /* Cursor effect */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite, color-change 4s infinite;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+    .typing-text {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .typing-text {
+        font-size: 2rem;
+    }
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframes for blinking caret effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}
+
+/* Keyframes for color transition */
+@keyframes color-change {
+    0% {
+        color: #ff0000;
+    }
+
+    25% {
+        color: #00ff00;
+    }
+
+    50% {
+        color: #0000ff;
+    }
+
+    75% {
+        color: #ff00ff;
+    }
+
+    100% {
+        color: #ff0000;
+    }
+}
